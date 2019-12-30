@@ -1,11 +1,9 @@
-package com.demo.login;
+package com.demo;
 
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-
-import javax.sql.DataSource;
 
 @SpringBootApplication
 @EnableJpaRepositories

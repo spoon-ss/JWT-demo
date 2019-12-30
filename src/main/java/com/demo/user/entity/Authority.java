@@ -1,20 +1,20 @@
-package com.demo.login.entity;
+package com.demo.user.entity;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name = "authorities")
+@Table(name = "e_authorities")
 public class Authority {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private long id;
+    private int id;
 
     @ManyToOne(cascade = {CascadeType.DETACH, CascadeType.REFRESH,
             CascadeType.MERGE, CascadeType.PERSIST})
     @JoinColumn(name = "username")
-    private User user;
+    private UserEntity user;
 
 
     @Column(name = "authority")
@@ -23,19 +23,19 @@ public class Authority {
     public Authority() {
     }
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public User getUser() {
+    public UserEntity getUser() {
         return user;
     }
 
-    public void setUser(User user) {
+    public void setUser(UserEntity user) {
         this.user = user;
     }
 
